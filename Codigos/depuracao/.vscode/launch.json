@@ -1,0 +1,29 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(GDB) Launch", // Nome da configuração
+      "type": "cppdbg", // Tipo de depurador
+      "request": "launch", // Tipo de solicitação (lançamento)
+      "program": "${workspaceFolder}/power", // Caminho para o executável compilado
+      "args": [], // Argumentos para o programa (opcional)
+      "stopAtEntry": false, // Pausa no início do programa
+      "cwd": "${workspaceFolder}", // Diretório de trabalho atual
+      "environment": [],
+      "externalConsole": true, // Usa console externo
+      "MIMode": "gdb", // Modo do depurador
+      "miDebuggerPath": "/usr/bin/gdb", // Caminho para o depurador (ajuste conforme necessário)
+      "setupCommands": [
+        {
+          "description": "Habilitar impressão de formato descomplicado",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build" // Nome da tarefa para compilar o programa antes da depuração
+    }
+  ]
+}
